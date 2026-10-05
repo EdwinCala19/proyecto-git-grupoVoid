@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Iron Force | Inscripción</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/inscripcion.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<a href="../index.html" class="logo">
+
+<i class="fa-solid fa-dumbbell"></i>
+
+<div>
+<strong>IRON<span>FORCE</span></strong>
+<small>GYM & FITNESS</small>
+</div>
+
+</a>
+
+<button id="menuToggle">
+<i class="fa-solid fa-bars"></i>
+</button>
+
+<ul id="navLinks">
+
+<li>
+<a href="../index.html">
+<i class="fa-solid fa-house"></i> Inicio
+</a>
+</li>
+
+<li>
+<a href="nosotros.html">
+<i class="fa-solid fa-users"></i> Nosotros
+</a>
+</li>
+
+<li>
+<a href="planes.html">
+<i class="fa-solid fa-tags"></i> Planes
+</a>
+</li>
+
+<li>
+<a href="entrenadores.html">
+<i class="fa-solid fa-user-tie"></i> Entrenadores
+</a>
+</li>
+
+<li>
+<a class="active button" href="inscripcion.html">
+<i class="fa-solid fa-fire"></i> Inscribirme
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+<span>
+<i class="fa-solid fa-fire"></i>
+DA EL PRIMER PASO
+</span>
+
+<h1>
+ÚNETE A <strong>IRON FORCE</strong>
+</h1>
+
+<p>
+Completa el formulario y comienza tu transformación.
+</p>
+
+</section>
+
+
+<section class="registration">
+
+<div class="form-info">
+
+<span>COMIENZA HOY</span>
+
+<h2>
+CONVIÉRTETE EN TU
+<strong>MEJOR VERSIÓN</strong>
+</h2>
+
+<p>
+Déjanos tus datos y nos pondremos en contacto contigo
+para ayudarte a elegir el plan ideal.
+</p>
+
+<div class="contact-item">
+<i class="fa-solid fa-location-dot"></i>
+
+<div>
+<strong>Ubicación</strong>
+<span>Cochabamba, Bolivia</span>
+</div>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-phone"></i>
+
+<div>
+<strong>Teléfono</strong>
+<span>+591 70000000</span>
+</div>
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-clock"></i>
+
+<div>
+<strong>Horarios</strong>
+<span>Lunes - Sábado / 06:00 - 22:00</span>
+</div>
+</div>
+
+</div>
+
+
+<div class="form-card">
+
+<form id="registrationForm">
+
+<div class="form-title">
+
+<i class="fa-solid fa-user-plus"></i>
+
+<div>
+<h3>Formulario de inscripción</h3>
+<p>Completa tus datos</p>
+</div>
+
+</div>
+
+
+<div class="input-group">
+
+<label for="nombre">
+<i class="fa-solid fa-user"></i>
+Nombre completo
+</label>
+
+<input
+type="text"
+id="nombre"
+placeholder="Ej. Juan Pérez"
+>
+
+<small class="error" id="nombreError"></small>
+
+</div>
+
+
+<div class="input-group">
+
+<label for="email">
+<i class="fa-solid fa-envelope"></i>
+Correo electrónico
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="ejemplo@gmail.com"
+>
+
+<small class="error" id="emailError"></small>
+
+</div>
+
+
+<div class="input-row">
+
+<div class="input-group">
+
+<label for="telefono">
+<i class="fa-solid fa-phone"></i>
+Teléfono
+</label>
+
+<input
+type="tel"
+id="telefono"
+placeholder="70000000"
+>
+
+<small class="error" id="telefonoError"></small>
+
+</div>
+
+
+<div class="input-group">
+
+<label for="edad">
+<i class="fa-solid fa-cake-candles"></i>
+Edad
+</label>
+
+<input
+type="number"
+id="edad"
+placeholder="18"
+min="14"
+max="80"
+>
+
+</div>
+
+</div>
+
+
+<div class="input-group">
+
+<label for="plan">
+<i class="fa-solid fa-dumbbell"></i>
+Plan elegido
+</label>
+
+<select id="plan">
+
+<option value="">
+Selecciona un plan
+</option>
+
+<option value="Básico">
+Básico - Bs. 100
+</option>
+
+<option value="Premium">
+Premium - Bs. 180
+</option>
+
+<option value="VIP">
+VIP - Bs. 250
+</option>
+
+</select>
+
+<small class="error" id="planError"></small>
+
+</div>
+
+
+<div class="input-group">
+
+<label for="objetivo">
+<i class="fa-solid fa-bullseye"></i>
+Objetivo
+</label>
+
+<select id="objetivo">
+
+<option value="">
+Selecciona tu objetivo
+</option>
+
+<option>Ganar masa muscular</option>
+<option>Perder peso</option>
+<option>Aumentar resistencia</option>
+<option>Mejorar mi salud</option>
+<option>Entrenar profesionalmente</option>
+
+</select>
+
+</div>
+
+
+<div class="input-group">
+
+<label for="mensaje">
+<i class="fa-solid fa-message"></i>
+Mensaje
+</label>
+
+<textarea
+id="mensaje"
+rows="4"
+placeholder="Cuéntanos un poco sobre tu objetivo..."
+></textarea>
+
+</div>
+
+
+<label class="check">
+
+<input type="checkbox" id="terminos">
+
+<span>
+Acepto los términos y condiciones.
+</span>
+
+</label>
+
+<small class="error" id="terminosError"></small>
+
+
+<button type="submit" class="submit">
+
+<i class="fa-solid fa-paper-plane"></i>
+
+ENVIAR INSCRIPCIÓN
+
+</button>
+
+
+<div id="formMessage"></div>
+
+</form>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="footer-logo">
+<i class="fa-solid fa-dumbbell"></i>
+IRON<span>FORCE</span>
+</div>
+
+<p>Fuerza. Disciplina. Resultados.</p>
+
+<div class="copyright">
+© 2026 Iron Force Gym
+</div>
+
+</footer>
+
+
+<script src="../js/inscripcion.js"></script>
+
+</body>
+</html>

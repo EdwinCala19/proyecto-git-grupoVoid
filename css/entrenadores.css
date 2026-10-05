@@ -1,0 +1,365 @@
+:root {
+    --red: #ff1744;
+    --black: #070707;
+    --dark: #111;
+    --card: #181818;
+    --gray: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(5,5,5,.95);
+    border-bottom: 1px solid #222;
+}
+
+.navbar {
+    height: 80px;
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > i {
+    color: var(--red);
+    font-size: 30px;
+}
+
+.logo strong {
+    display: block;
+}
+
+.logo strong span,
+.footer-logo span {
+    color: var(--red);
+}
+
+.logo small {
+    color: #666;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+#navLinks {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+#navLinks a {
+    padding: 10px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+#navLinks a:hover,
+#navLinks .active {
+    color: var(--red);
+}
+
+#navLinks .button {
+    background: var(--red);
+    color: white;
+}
+
+#menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+
+.hero {
+    min-height: 55vh;
+    padding: 150px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle,#400d18,#070707 60%);
+}
+
+.hero span {
+    color: var(--red);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: "Oswald";
+    font-size: 75px;
+    line-height: 1;
+    margin: 20px;
+}
+
+.hero h1 strong {
+    color: var(--red);
+}
+
+.hero p {
+    color: var(--gray);
+}
+
+
+.trainers {
+    padding: 100px 7%;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.section-title span {
+    color: var(--red);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-family: "Oswald";
+    font-size: 45px;
+    margin: 15px;
+}
+
+.section-title strong {
+    color: var(--red);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 45px 0;
+}
+
+.filter {
+    padding: 12px 25px;
+    background: transparent;
+    border: 1px solid #333;
+    color: #aaa;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.filter:hover,
+.filter.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: white;
+}
+
+.trainer-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.trainer-card {
+    background: var(--card);
+    border: 1px solid #292929;
+    transition: .4s;
+    overflow: hidden;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--red);
+}
+
+.trainer-card.hidden {
+    display: none;
+}
+
+.trainer-photo {
+    height: 300px;
+    background: linear-gradient(145deg,#3b0d17,#111);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.trainer-photo i {
+    font-size: 130px;
+    color: #444;
+}
+
+.trainer-photo span {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    font-family: "Oswald";
+    font-size: 35px;
+    color: rgba(255,255,255,.1);
+}
+
+.trainer-info {
+    padding: 30px;
+}
+
+.trainer-info h3 {
+    font-family: "Oswald";
+    font-size: 25px;
+}
+
+.specialty {
+    color: var(--red) !important;
+    font-size: 11px !important;
+    margin: 10px 0;
+}
+
+.trainer-info > p:last-of-type {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.trainer-social {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.trainer-social a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+}
+
+.trainer-social a:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+
+.cta {
+    text-align: center;
+    padding: 100px 20px;
+    background: #111;
+}
+
+.cta h2 {
+    font-family: "Oswald";
+    font-size: 50px;
+}
+
+.cta h2 strong {
+    color: var(--red);
+}
+
+.cta p {
+    color: #777;
+    margin: 15px;
+}
+
+.cta a {
+    display: inline-block;
+    background: var(--red);
+    padding: 15px 30px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background: #050505;
+    padding: 45px;
+    color: #666;
+}
+
+.footer-logo {
+    font-family: "Oswald";
+    color: white;
+    font-size: 25px;
+}
+
+.footer-logo i,
+.footer-logo span {
+    color: var(--red);
+}
+
+.copyright {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    margin-top: 25px;
+    font-size: 11px;
+}
+
+@media(max-width:850px) {
+
+    #menuToggle {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #080808;
+        flex-direction: column;
+    }
+
+    #navLinks.show {
+        display: flex;
+    }
+
+    #navLinks a {
+        text-align: center;
+    }
+
+    .trainer-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+@media(max-width:500px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+}
