@@ -3,7 +3,7 @@
 ## Integrantes
 
 - Edwin Cala - Integrante A
-- void-lang19 - Integrante B cuenta secundaria
+- con aporte de cuenta secundaria void-lang19
 
 ## Descripción
 
