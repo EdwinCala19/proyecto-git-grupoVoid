@@ -1,0 +1,398 @@
+:root {
+    --red: #ff1744;
+    --black: #070707;
+    --dark: #111;
+    --card: #191919;
+    --gray: #888;
+    --green: #20c997;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(5,5,5,.96);
+    border-bottom: 1px solid #222;
+}
+
+.navbar {
+    height: 80px;
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > i {
+    color: var(--red);
+    font-size: 30px;
+}
+
+.logo strong {
+    display: block;
+}
+
+.logo strong span,
+.footer-logo span {
+    color: var(--red);
+}
+
+.logo small {
+    color: #666;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+#navLinks {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+#navLinks a {
+    padding: 10px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+#navLinks a:hover,
+#navLinks .active {
+    color: var(--red);
+}
+
+#navLinks .button {
+    background: var(--red);
+    color: white;
+}
+
+#menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+}
+
+
+
+.hero {
+    min-height: 50vh;
+    padding: 150px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle,#420d18,#070707 60%);
+}
+
+.hero span {
+    color: var(--red);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: "Oswald";
+    font-size: 70px;
+    line-height: 1;
+    margin: 20px;
+}
+
+.hero h1 strong {
+    color: var(--red);
+}
+
+.hero p {
+    color: var(--gray);
+}
+
+
+.registration {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 25px;
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 70px;
+}
+
+.form-info > span {
+    color: var(--red);
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.form-info h2 {
+    font-family: "Oswald";
+    font-size: 50px;
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.form-info h2 strong {
+    display: block;
+    color: var(--red);
+}
+
+.form-info > p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.contact-item > i {
+    color: var(--red);
+    font-size: 20px;
+    width: 25px;
+}
+
+.contact-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item span {
+    color: #777;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+
+.form-card {
+    background: var(--card);
+    border: 1px solid #292929;
+    padding: 40px;
+    box-shadow: 0 20px 70px rgba(0,0,0,.3);
+}
+
+.form-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #292929;
+}
+
+.form-title > i {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--red);
+    font-size: 20px;
+}
+
+.form-title h3 {
+    font-size: 17px;
+}
+
+.form-title p {
+    color: #666;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #aaa;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.input-group label i {
+    color: var(--red);
+    margin-right: 7px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    background: #0d0d0d;
+    border: 1px solid #333;
+    color: white;
+    outline: none;
+    font-family: inherit;
+    transition: .3s;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 15px rgba(255,23,68,.08);
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.error {
+    display: block;
+    color: var(--red);
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #777;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.check input {
+    accent-color: var(--red);
+}
+
+.submit {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    border: none;
+    background: var(--red);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit:hover {
+    background: white;
+    color: black;
+}
+
+#formMessage {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 12px;
+}
+
+.success {
+    background: rgba(32,201,151,.1);
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+
+footer {
+    text-align: center;
+    background: #050505;
+    padding: 45px;
+    color: #666;
+}
+
+.footer-logo {
+    color: white;
+    font-family: "Oswald";
+    font-size: 25px;
+}
+
+.footer-logo i,
+.footer-logo span {
+    color: var(--red);
+}
+
+.copyright {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    font-size: 11px;
+}
+
+@media(max-width:850px) {
+
+    #menuToggle {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #080808;
+        flex-direction: column;
+    }
+
+    #navLinks.show {
+        display: flex;
+    }
+
+    #navLinks a {
+        text-align: center;
+    }
+
+    .registration {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:600px) {
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .form-card {
+        padding: 25px;
+    }
+
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+}

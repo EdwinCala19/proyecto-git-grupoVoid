@@ -1,0 +1,405 @@
+:root {
+    --red: #ff1744;
+    --black: #070707;
+    --dark: #111;
+    --card: #181818;
+    --gray: #888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(5,5,5,.95);
+    border-bottom: 1px solid #222;
+}
+
+.navbar {
+    height: 80px;
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > i {
+    color: var(--red);
+    font-size: 30px;
+}
+
+.logo strong {
+    display: block;
+}
+
+.logo strong span,
+.footer-logo span {
+    color: var(--red);
+}
+
+.logo small {
+    display: block;
+    color: #666;
+    font-size: 8px;
+    letter-spacing: 3px;
+}
+
+#navLinks {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+#navLinks a {
+    display: block;
+    padding: 10px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+#navLinks a:hover,
+#navLinks .active {
+    color: var(--red);
+}
+
+#navLinks .button {
+    background: var(--red);
+    color: white;
+}
+
+#menuToggle {
+    display: none;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 25px;
+}
+
+
+
+.hero {
+    min-height: 55vh;
+    padding: 150px 20px 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, #410d18, #070707 60%);
+}
+
+.hero > span {
+    color: var(--red);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: "Oswald";
+    font-size: 80px;
+    line-height: 1;
+    margin: 20px;
+}
+
+.hero h1 strong {
+    color: var(--red);
+}
+
+.hero p {
+    color: var(--gray);
+}
+
+
+
+.plans {
+    padding: 100px 7%;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: auto auto 60px;
+}
+
+.section-title > span {
+    color: var(--red);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    font-family: "Oswald";
+    font-size: 45px;
+    margin: 12px;
+}
+
+.section-title strong {
+    color: var(--red);
+}
+
+.section-title p {
+    color: var(--gray);
+}
+
+.plan-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.plan {
+    background: var(--card);
+    padding: 45px 30px;
+    text-align: center;
+    border: 1px solid #292929;
+    position: relative;
+    transition: .4s;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+    border-color: var(--red);
+}
+
+.plan.popular {
+    border: 2px solid var(--red);
+    transform: scale(1.04);
+}
+
+.plan.popular:hover {
+    transform: scale(1.04) translateY(-10px);
+}
+
+.popular-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--red);
+    padding: 8px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.plan-icon {
+    width: 65px;
+    height: 65px;
+    margin: 10px auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,23,68,.12);
+    color: var(--red);
+    font-size: 27px;
+}
+
+.plan.popular .plan-icon {
+    margin-top: 25px;
+}
+
+.plan h3 {
+    font-family: "Oswald";
+    font-size: 27px;
+}
+
+.plan > p {
+    color: #777;
+    font-size: 12px;
+    margin: 10px 0 20px;
+}
+
+.price {
+    font-family: "Oswald";
+    font-size: 55px;
+    margin-bottom: 25px;
+}
+
+.price small {
+    color: var(--red);
+    font-size: 20px;
+}
+
+.price span {
+    color: #777;
+    font-family: "Montserrat";
+    font-size: 11px;
+}
+
+.plan ul {
+    list-style: none;
+    text-align: left;
+}
+
+.plan li {
+    padding: 12px 0;
+    border-bottom: 1px solid #292929;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.plan li i {
+    color: #20c997;
+    margin-right: 8px;
+}
+
+.choose-plan {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--red);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.choose-plan:hover {
+    background: var(--red);
+}
+
+
+
+.comparison {
+    padding: 90px 7%;
+    text-align: center;
+    background: #111;
+}
+
+.comparison h2 {
+    font-family: "Oswald";
+    font-size: 40px;
+}
+
+.comparison h2 strong {
+    color: var(--red);
+}
+
+.objective-grid {
+    max-width: 900px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.objective-grid div {
+    padding: 35px;
+    border: 1px solid #292929;
+    transition: .3s;
+}
+
+.objective-grid div:hover {
+    border-color: var(--red);
+}
+
+.objective-grid i {
+    color: var(--red);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.objective-grid p {
+    color: #777;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 45px;
+    background: #050505;
+    color: #666;
+}
+
+.footer-logo {
+    font-family: "Oswald";
+    font-size: 25px;
+    color: white;
+}
+
+.footer-logo i,
+.footer-logo span {
+    color: var(--red);
+}
+
+.copyright {
+    border-top: 1px solid #222;
+    padding-top: 20px;
+    margin-top: 25px;
+    font-size: 11px;
+}
+
+@media(max-width: 850px) {
+
+    #menuToggle {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #080808;
+        flex-direction: column;
+    }
+
+    #navLinks.show {
+        display: flex;
+    }
+
+    #navLinks a {
+        text-align: center;
+    }
+
+    .plan-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .plan.popular {
+        transform: none;
+    }
+
+    .objective-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+}
